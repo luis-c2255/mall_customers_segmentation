@@ -37,7 +37,7 @@ for col in numeric_cols:
 
 gender_counts = df['gender'].value_counts().reset_index()
 
-fig = px.bar(
+fig_bar = px.bar(
     gender_counts,
     x='gender',
     y='count',
@@ -47,7 +47,7 @@ fig = px.bar(
     color_discrete_sequence=['#4cc9a6', '#5a6a7a'],
     opacity=0.85
 )
-fig.bar.update_layout(
+fig_bar.update_layout(
     template='plotly_dark',
     paper_bgcolor='rgba(0,0,0,0)',
     plot_bgcolor='rgba(0,0,0,0)'

@@ -69,7 +69,7 @@ fig_3d = px.scatter_3d(
     color='cluster_3d',      # Tu columna precalculada
     symbol='cluster_3d',     # Diferentes formas para cada cluster
     opacity=0.7,
-    title="Análisis Espacial de Clientes",
+    title="Spatial Customer Analysis",
     color_discrete_sequence=px.colors.qualitative.Bold # Paleta vibrante para modo oscuro
 )
 
@@ -78,9 +78,9 @@ fig_3d.update_layout(
     template="plotly_dark",
     margin=dict(l=0, r=0, b=0, t=40), # Aprovechar todo el ancho
     scene=dict(
-        xaxis_title='Edad',
-        yaxis_title='Ingresos ($k)',
-        zaxis_title='Puntuación Gasto',
+        xaxis_title='Age',
+        yaxis_title='Income ($k)',
+        zaxis_title='Spending Score',
         # Fondo de los ejes para que combine con tu config.toml
         xaxis=dict(gridcolor="#2c3e50"),
         yaxis=dict(gridcolor="#2c3e50"),

@@ -60,8 +60,6 @@ fig_bar.update_layout(
 )
 st.plotly_chart(fig_bar, use_container_width=True)
 
-st.subheader("Visualización de Segmentos en 3D")
-
 # Usamos tus columnas específicas
 fig_3d = px.scatter_3d(
     df, 

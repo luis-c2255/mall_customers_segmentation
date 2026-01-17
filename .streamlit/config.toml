@@ -4,11 +4,11 @@ backgroundColor="#0a1a2f"       # Dark background
 secondaryBackgroundColor="#5a6a7a"  # Blue Slate
 textColor="#f7f9fc" # Platinum
 linkColor="#3a8dff"
-font="Nunito:https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
-baseRadius="medium"
-buttonRadius="medium"
+font="sans serif"
+baseRadius=8
+buttonRadius=8
 borderColor="#4cc9a6" 
 dataframeBorderColor="#4cc9a6" 
-showWidgetBorder="#4cc9a6" 
+showWidgetBorder=true
 chartCategoricalColors =["#96005A", "#0000C8", "#0019FF", "#0098FF", "#2CFF96", "#97FF00", "#FFEA00", "#FF6F00", "#FF0000"]
 chartSequentialColors =["#B0F2BC", "#89E8AC", "#67DBA5", "#4CC8A3", "#38B2A3", "#38B2A3", "#257D98", "#4CC9A6"]

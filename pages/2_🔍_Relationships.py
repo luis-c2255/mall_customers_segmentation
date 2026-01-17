@@ -8,7 +8,7 @@ st.title("🔍 Relationships")
 
 fig = px.scatter(
     df, x="annual_income_k", y="spending_score_(1-100)",
-    color="genre",
+    color="gender",
     color_discrete_sequence=["#1F6FEB", "#2EC4B6"]
 )
 st.plotly_chart(fig, use_container_width=True)

@@ -24,10 +24,12 @@ The goal is to demonstrate how even a small dataset can support a complete analy
 ## 🖼️ Screenshots
 
 **Dashboard Home**
-![Home Page](screenshots/home.png)
+
+![Home Page](images/dash.png)
 
 **Distributions Page**
-![Distributions](screenshots/distributions.png)
+
+![Distributions](images/dist.png)
 
 **Segmentation Page**
 ![Segmentation](screenshots/segmentation.png)
@@ -35,7 +37,8 @@ The goal is to demonstrate how even a small dataset can support a complete analy
 **Behavioral Insights**
 ![Insights](screenshots/insights.png)
 
-##🧭 Features
+## 🧭 Features
+
 ✔️ Multi‑Page Streamlit App
 
 Organized using st.pages:
@@ -74,14 +77,8 @@ Linear Regression
 - Feature importance
 
 ## 📊 Dataset
-The dataset includes:
-|Column|Description|
-|-|-|
-|CustomerID|Unique customer identifier|
-|Gender|Customer gender|
-|Age|Customer age|
-|Annual Income(k$)|Annual income in thousands|
-|Spending Score(1-100)|Mall-assigned spending score|
+
+![table](images/table.png)
 
 ## 🧠 Key Insights
 - Income and spending score are not strongly correlated

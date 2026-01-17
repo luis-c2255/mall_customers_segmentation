@@ -9,7 +9,7 @@ st.title("📈 Predictive Modeling")
 st.write("Model results and feature importance.")
 
 fig = px.bar(
-    df[["age", "annual_income_k", "genre_male"]].corr()["annual_income_k"],
+    df[["age", "annual_income_k", "gender_male"]].corr()["annual_income_k"],
     color_discrete_sequence=["#1F6FEB"]
 )
 st.plotly_chart(fig, use_container_width=True)

@@ -16,9 +16,9 @@ for col in numeric_cols:
     st.plotly_chart(fig, use_container_width=True)
 
 fig = px.bar(
-    df["genre"].value_counts().reset_index(),
-    x="index", y="genre",
-    labels={"index": "Gender", "genre": "Count"},
+    df["gender"].value_counts().reset_index(),
+    x="index", y="gender",
+    labels={"index": "Gender", "gender": "Count"},
     color_discrete_sequence=["#2EC4B6"]
 )
 st.plotly_chart(fig, use_container_width=True)

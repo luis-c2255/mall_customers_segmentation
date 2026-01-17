@@ -21,7 +21,7 @@ for col in numeric_cols:
         marker_line_width=1,
         marker_line_color='white'
     )
-    fig_update_layout(
+    fig.update_layout(
         template='plotly_dark',
         paper_bgcolor='rgba(0,0,0,0)',
         plot_bgcolor='rgba(0,0,0,0)',
@@ -47,7 +47,7 @@ fig = px.bar(
     color_discrete_sequence=['#4cc9a6', '#5a6a7a'],
     opacity=0.85
 )
-fig_bar.update_layout(
+fig.bar.update_layout(
     template='plotly_dark',
     paper_bgcolor='rgba(0,0,0,0)',
     plot_bgcolor='rgba(0,0,0,0)'

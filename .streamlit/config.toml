@@ -1,6 +1,7 @@
 [theme]
-primaryColor="#1F6FEB"          # Electric Blue
-backgroundColor="#F5F7FA"       # Light background
-secondaryBackgroundColor="#0A1A2F"  # Deep Navy
-textColor="#0A1A2F"
+primaryColor="#4cc9a6"          # Mint Leaf
+backgroundColor="#0a1a2f"       # Dark background
+secondaryBackgroundColor="#5a6a7a"  # Blue Slate
+textColor="#f7f9fc" # Platinum
+secondarytextColor="#3a8dff"
 font="sans serif"

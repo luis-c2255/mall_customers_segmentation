@@ -52,13 +52,13 @@ fig_bar.update_layout(
     paper_bgcolor='rgba(0,0,0,0)',
     plot_bgcolor='rgba(0,0,0,0)'
 )    
-fig.update_layout(
+fig_bar.update_layout(
     margin=dict(t=50, b=50, l=25, r=25),
     hovermode="x unified", # Crea una línea vertical de guía al pasar el mouse
     # Esto hace que las barras crezcan suavemente al cargar
     transition={'duration': 1000, 'easing': 'cubic-in-out'}
 )
-st.plotly_chart(fig, use_container_width=True)
+st.plotly_chart(fig_bar, use_container_width=True)
 
 st.subheader("Visualización de Segmentos en 3D")
 

@@ -29,7 +29,7 @@ if 'df' not in st.session_state:
 # 3. Define the Navigation Structure
 pages = {
     "Overview": [
-        st.Page("app.py", title="Main Dashboard", icon="🏠", default=True),
+        st.Page("streamlit_app.py", title="Main Dashboard", icon="🏠", default=True),
     ],
     "Exploratory Analysis": [
         st.Page("pages/1_📊_Distributions.py", title="Distributions", icon="📊"),

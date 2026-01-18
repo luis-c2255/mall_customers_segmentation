@@ -12,7 +12,7 @@ col1, col2 = st.columns(2)
 with col1:
     fig_age_spending = px.scatter(
         df, x="age", y="spending_score_(1-100)",
-        color="genre",
+        color="gender",
         opacity=0.7,
         title="Spending Score by Age",
         color_discrete_sequence=["#4cc9a6", "#BD3085"],

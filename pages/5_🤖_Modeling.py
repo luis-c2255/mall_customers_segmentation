@@ -7,7 +7,7 @@ from sklearn.ensemble import RandomForestRegressor
 
 df = pd.read_csv("Mall_Customers_cleaned_with_clusters.csv")
 
-st.title("📈 Predictive Modeling")
+st.title("🤖 Predictive Modeling")
 
 # --- 1. MODEL TRAINING LOGIC ---
 # We perform this inside the app to show real-time metrics

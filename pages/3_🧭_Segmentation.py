@@ -84,6 +84,80 @@ if selected_cluster != "All":
 
 st.markdown("---")
 
+st.markdown("---")
+
+st.subheader("Dynamic Segment Explorer")
+
+col_radio, col_filter = st.columns([2, 1])
+
+with col_radio:
+    cluster_model = st.radio(
+        "Select Clustering Model:",
+        ["2D Segmentation (Income + Score)", "3D Segmentation (Age + Income + Score)"],
+        horizontal=True
+    )
+
+# Determinar qué columna usar
+active_col = 'cluster_2d' if "2D" in cluster_model else 'cluster_3d'
+
+with col_filter:
+    # Obtener lista de clusters únicos y añadir opción "Todos"
+    cluster_options = ["All"] + sorted(df[active_col].unique().tolist())
+    selected_cluster = st.selectbox("Isolate a Specific Cluster:", cluster_options)
+
+# --- 2. FILTRADO DE DATOS ---
+if selected_cluster == "All":
+    filtered_df = df
+    plot_opacity = 0.7
+else:
+    filtered_df = df[df[active_col] == selected_cluster]
+    plot_opacity = 0.9 # Más sólido si está solo
+
+fig_3d = px.scatter_3d(
+    filtered_df, 
+    x='age', 
+    y='annual_income_k', 
+    z='spending_score_(1-100)',
+    color=active_col,
+    title=f"3D View: {cluster_model} | Cluster: {selected_cluster}",
+    color_discrete_sequence=px.colors.qualitative.Bold,
+    opacity=plot_opacity,
+    labels={active_col: "Cluster ID"}
+)
+
+# Ajuste de estilo y animaciones de transición
+fig_3d.update_layout(
+    template="plotly_dark",
+    paper_bgcolor='rgba(0,0,0,0)', 
+    scene=dict(xaxis_title='Age', yaxis_title='Annual Income (k$)', zaxis_title='Spending Score'),
+    transition={'duration': 500}
+)
+st.plotly_chart(fig_3d, use_container_width=True)
+
+# --- 3. CLUSTER PROFILING ---
+if selected_cluster != "All":
+    st.success(f"### 💡 Cluster {selected_cluster} Insights")
+    m1, m2, m3 = st.columns(3)
+    
+    avg_age = filtered_df['age'].mean()
+    avg_inc = filtered_df['annual_income_k'].mean()
+    avg_score = filtered_df['spending_score_(1-100)'].mean()
+    
+    m1.metric("Avg. Age", f"{avg_age:.1f} years")
+    m2.metric("Avg. Income", f"${avg_inc:.1f}k")
+    m3.metric("Avg. Spending Score", f"{avg_score:.1f}/100")
+    
+    # Download Button for the isolated cluster
+    csv = filtered_df.to_csv(index=False).encode('utf-8')
+    st.download_button(
+        label=f"📥 Download Data for Cluster {selected_cluster}",
+        data=csv,
+        file_name=f'cluster_{selected_cluster}_data.csv',
+        mime='text/csv',
+    )
+
+st.markdown("---")
+
 X_2d = df[["annual_income_k", "spending_score_(1-100)"]].copy()
 X_3d = df[["age", "annual_income_k", "spending_score_(1-100)"]].copy()
 

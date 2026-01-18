@@ -41,11 +41,13 @@ with col_m1:
     st.metric(label="Linear Regression ($R^2$)", value=f"{lr_score:.3f}")
     
 with col_m2:
-    # Random Forest usually performs better or worse depending on the data
-    st.metric(label="Random Forest ($R^2$)", value=f"{rf_score:.3f}", 
-              delta=f"{rf_score - lr_score:.3f}", delta_description="vs Linear Reg")
-
-st.info("**Note:** $R^2$ represents how much of the spending variance is explained by Age, Income, and Gender.")
+    # We remove delta_description and keep it simple for compatibility
+    st.metric(
+        label="Random Forest (R²)", 
+        value=f"{rf_score:.3f}", 
+        delta=f"{rf_score - lr_score:.3f}"
+    )
+    st.caption("Delta shows improvement over Linear Regression") # Alternative to description
 
 # --- 3. FEATURE IMPORTANCE & PREDICTION ---
 col_plot, col_pred = st.columns([3, 2])

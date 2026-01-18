@@ -7,6 +7,8 @@ df = pd.read_csv("Mall_Customers_cleaned_with_clusters.csv")
 
 st.title("🧠 Behavioral Insights")
 
+st.subheader("Profile Summary by Cluster")
+
 # Lógica de agrupación
 cluster_profile = df.groupby("cluster_3d").agg(
     count=("customerid", "count"),
@@ -33,6 +35,7 @@ st.divider()
 col1, col2 = st.columns(2)
 
 with col1:
+    st.subheader("Quadrant Analysis")
     
     # Cálculo de medianas
     income_median = df["annual_income_k"].median()

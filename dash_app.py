@@ -36,7 +36,7 @@ pages = {
         st.Page("pages/2_🔍_Relationships.py", title="Relationships", icon="🔍"),
     ],
     "Advanced Modeling": [
-        st.Page("pages/3_🎯_Segmentation.py", title="Segmentation", icon="🎯"),
+        st.Page("pages/3_🧭_Segmentation.py", title="Segmentation", icon="🎯"),
         st.Page("pages/4_🧠_Behavioral_Insights.py", title="Behavioral Insights", icon="🧠"),
         st.Page("pages/5_🤖_Modeling.py", title="Modeling", icon="🤖"),
     ]

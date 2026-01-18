@@ -48,7 +48,7 @@ with col3:
         labels={'gender': 'Gender', 'annual_income_k': 'Annual Income (k$)'}
     )
     fig_inc_gen.update_layout(template='plotly_dark', paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)')
-    st.plotly_chart(figure_inc_gen, use_container_width=True)
+    st.plotly_chart(fig_inc_gen, use_container_width=True)
 
 with col4:
     fig_spend_gen = px.box(df, x='gender', y='spending_score_(1-100)',

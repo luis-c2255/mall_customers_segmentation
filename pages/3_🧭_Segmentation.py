@@ -94,9 +94,9 @@ scaler_3d = StandardScaler()
 X_3d_scaled = scaler_3d.fit_transform(X_3d)
 
 # --- FILA 1: Método del Codo y Métricas ---
-col1, col2 = st.columns(2)
+col3, col4 = st.columns(2)
 
-with col1:
+with col3:
     # El código de tu lógica de inercia
     inertias = []
     K_range = range(2, 11)
@@ -116,7 +116,7 @@ with col1:
     fig_elbow.update_layout(template="plotly_dark", paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)')
     st.plotly_chart(fig_elbow, use_container_width=True)
 
-with col2:
+with col4:
     # Cálculos de Silhouette
     sil_2d = silhouette_score(X_2d_scaled, df["cluster_2d"])
     sil_3d = silhouette_score(X_3d_scaled, df["cluster_3d"])
@@ -130,9 +130,9 @@ with col2:
 st.divider()
 
 # --- FILA 2: Visualización de Clusters ---
-col3, col4 = st.columns(2)
+col5, col6 = st.columns(2)
 
-with col3:
+with col5:
     # Usamos Plotly Express para el scatter de clusters
     fig_2d = px.scatter(
         df, x="annual_income_k", y="spending_score_(1-100)",
@@ -145,7 +145,7 @@ with col3:
     fig_2d.update_layout(template="plotly_dark", paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)', legend_title="Cluster")
     st.plotly_chart(fig_2d, use_container_width=True)
 
-with col4:
+with col6:
     # Reducción de dimensionalidad PCA
     pca = PCA(n_components=2, random_state=42)
     X_3d_pca = pca.fit_transform(X_3d_scaled)

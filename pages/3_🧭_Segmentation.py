@@ -5,6 +5,7 @@ import pandas as pd
 from sklearn.cluster import KMeans
 from sklearn.metrics import silhouette_score
 from sklearn.decomposition import PCA
+from sklearn.preprocessing import StandardScaler
 
 df = pd.read_csv("Mall_Customers_cleaned_with_clusters.csv")
 

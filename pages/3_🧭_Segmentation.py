@@ -10,6 +10,15 @@ df = pd.read_csv("Mall_Customers_cleaned_with_clusters.csv")
 
 st.title("🧭 Customer Segmentation")
 
+X_2d = df[["annual_income_k", "spending_score_(1-100)"]].copy()
+X_3d = df[["age", "annual_income_k", "spending_score_(1-100)"]].copy()
+
+scaler_2d = StandardScaler()
+X_2d_scaled = scaler_2d.fit_transform(X_2d)
+
+scaler_3d = StandardScaler()
+X_3d_scaled = scaler_3d.fit_transform(X_3d)
+
 # --- FILA 1: Método del Codo y Métricas ---
 col1, col2 = st.columns(2)
 

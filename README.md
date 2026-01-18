@@ -25,21 +25,25 @@ The goal is to demonstrate how even a small dataset can support a complete analy
 
 **Dashboard Home**
 
-![Home Page](images/dash.png)
+![Home Page](images/dash1.png)
 
 **Distributions Page**
 
 ![Distributions](images/dist.png)
 
 **Segmentation Page**
-![Segmentation](screenshots/segmentation.png)
+
+![Segmentation](images/customer_seg.png)
 
 **Behavioral Insights**
-![Insights](screenshots/insights.png)
+
+![Insights](images/behavioral.png)
 
 ## 🧭 Features
 
 ✔️ Multi‑Page Streamlit App
+
+Click here ---->  [APP](https://mallcustomerssegmentation-ko.streamlit.app/)
 
 Organized using st.pages:
 - Overview

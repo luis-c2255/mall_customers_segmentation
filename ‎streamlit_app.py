@@ -1,3 +1,6 @@
+import streamlit as st
+import pandas as pd
+
 st.markdown("""
     <style>
         /* Stylize the search input */
@@ -7,9 +10,6 @@ st.markdown("""
         }
     </style>
 """, unsafe_allow_html=True)
-
-import streamlit as st
-import pandas as pd
 
 # 1. Page Configuration
 st.set_page_config(

@@ -2,7 +2,7 @@
 
 A complete end‑to‑end customer segmentation and behavioral insights project
 
-![Static Badge](https://img.shields.io/badge/streamlit-app-red?logo=python&logoColor=red&color=red)
+![Static Badge](https://img.shields.io/badge/streamlit-app-red?logo=streamlit)
 ![Static Badge](https://img.shields.io/badge/Plotly-charts-green?logo=plotly&logoColor=green&color=green)
 ![Static Badge](https://img.shields.io/badge/python-3.10-blue?logo=python&color=blue)
 ![Static Badge](https://img.shields.io/badge/License-MIT-orange?color=orange)

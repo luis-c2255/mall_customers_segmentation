@@ -43,7 +43,7 @@ The goal is to demonstrate how even a small dataset can support a complete analy
 
 ✔️ Multi‑Page Streamlit App
 
-Click here ---->  [APP](https://mallcustomerssegmentation-ko.streamlit.app/)
+Click here ---->  [APP](https://huggingface.co/spaces/Luismodesto86/Customer_Segmentation)
 
 Organized using st.pages:
 - Overview
